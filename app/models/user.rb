@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :omniauthable
 
+validates :username, presence: true, length: {maximum: 50}
 
 def self.from_omniauth(auth)
    user = User.where(:email => auth.info.email).first
@@ -12,7 +13,7 @@ def self.from_omniauth(auth)
      return user
    else
      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-       user.name = auth.info.name
+       user.username = auth.info.name
        user.provider = auth.provider
        user.uid = auth.uid
        user.email = auth.info.email

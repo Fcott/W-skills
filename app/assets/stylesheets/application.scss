@@ -1,2 +1,47 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// general
+body {
+  color: #565a5c;
+  background-color: #FCFCFC;
+}
+
+.pic-small {
+  width: 24px;
+}
+
+.container {
+	width: 80%;
+}
+// navbar
+.navbar {
+  padding: 10px;
+  margin: 0;
+}
+#navbar {
+  vertical-align: middle;
+}
+.navbar-brand {
+  padding: 0;
+  height: auto;
+}
+.navbar-nav li {
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+.navbar-nav > li > a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.nav > li > a {
+  padding: 0px;
+}
+
+.dropdown {
+  margin: 0;
+}

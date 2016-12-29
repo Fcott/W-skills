@@ -26,6 +26,7 @@ gem 'devise'
 gem'omniauth'
 gem'omniauth-facebook'
 gem "figaro"
+gem 'font-awesome-sass'
 
 
 group :development, :test do
