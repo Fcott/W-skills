@@ -29,8 +29,8 @@
           <ul class="dropdown-menu">
             <li><a href="#">Your Posts</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#"><%= link_to "Edit Profile", edit_user_registration_path %></a></li>
-            <li><a href="#"><%= link_to "Log out", destroy_user_session_path, method: :delete %></a></li>
+            <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+            <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
           </ul>
         </li>
         <% end %>
