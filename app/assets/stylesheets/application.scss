@@ -16,21 +16,23 @@ body {
 .container {
 	width: 80%;
 }
+
+
+
 // navbar
 .navbar {
-  padding: 10px;
+  padding-top: 15px;
   margin: 0;
 }
-#navbar {
-  vertical-align: middle;
-}
+
 .navbar-brand {
+  font-size: 2em;
   padding: 0;
   height: auto;
 }
 .navbar-nav li {
   margin-right: 20px;
-  vertical-align: middle;
+  margin-bottom: 10px
 }
 
 .navbar-nav > li > a {
@@ -44,4 +46,20 @@ body {
 
 .dropdown {
   margin: 0;
+}
+
+.fa-envelope-o:before {
+  margin-right: 5px;
+}
+
+// navbar for mobile
+
+@media (max-width: 767px){
+  .navbar-toggle {
+    margin: 0 0 14px 0;
+    padding: 6px 8px;
+  }
+  .navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header {
+      padding: 0px;
+  }
 }
