@@ -6,7 +6,7 @@
 // general
 body {
   color: #565a5c;
-  background-color: #FCFCFC;
+  background-color: #F8F8F8;
 }
 
 .pic-small {
@@ -17,9 +17,27 @@ body {
 	width: 80%;
 }
 
+// Form
+.btn-primary.btn {
+  border-radius: 2px;
+  font-weight: bold;
+  padding: 10px 25px 10px 25px;
+}
 
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-control {
+  border-radius: 2px;
+  height: 4rem;
+}
 
 // navbar
+
+.navbar-default {
+  background-color: #FDFDFD;
+}
 .navbar {
   padding-top: 15px;
   margin: 0;
