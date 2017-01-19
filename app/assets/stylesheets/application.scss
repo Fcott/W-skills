@@ -13,8 +13,16 @@ body {
   width: 24px;
 }
 
+.pic-middle {
+  width: 56px;
+}
+
 .container {
 	width: 80%;
+}
+
+.center {
+  text-align: center;
 }
 
 // Form
@@ -70,7 +78,17 @@ body {
   margin-right: 5px;
 }
 
-// navbar for mobile
+// user page
+
+.user_top {
+  margin: 30px 10px;
+}
+.user_name {
+  font-size: 24px;
+  padding-left: 15px;
+}
+
+// For mobile
 
 @media (max-width: 767px){
   .navbar-toggle {
@@ -79,5 +97,13 @@ body {
   }
   .navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header {
       padding: 0px;
+  }
+
+  .user_top {
+    margin: 15px 7px;
+  }
+  .user_name {
+    font-size: 16px;
+    padding-left: 10px;
   }
 }
