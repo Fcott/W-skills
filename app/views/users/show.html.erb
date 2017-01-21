@@ -8,5 +8,15 @@
     </div>
 
     <h4 class="center"><%= "#{@user.username}"%> Skills</h4>
+    <div class="skill_form center">
+      <%= render "skill_tags/form", user: @user　%>
+    </div>
+    <ul class="skills">
+    <% if @skills.any? %>
+      <%= render @skills %>
+    <% else %>
+      <br>
+      <p class="center">you haven't added any skills yet.</p>
+    <% end %>
   </div>
 </div>

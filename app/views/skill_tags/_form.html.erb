@@ -1,0 +1,11 @@
+<%= form_for SkillTag.new, url: skill_tags_path do |f| %>
+  <div class="form-group inline_block">
+    <%= f.text_field :name, placeholder: "skill name", class: "form-control inline_block" %>
+  </div>
+  <%= f.hidden_field :user_id, value: @user.id %>
+  <!-- <%= f.hidden_field :added_user, value: current_user.id %> -->
+
+  <div class="actions inline_block">
+    <%= f.submit "追加", class: "btn btn-primary" %>
+  </div>
+<% end %>

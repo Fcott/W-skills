@@ -1,0 +1,6 @@
+<li id="skill-<%= user_skill.id %>">
+  <div class="user_skills">
+    <%= "#{user_skill.points}   " %>
+    <%= link_to "#{user_skill.skill_tag.name}", skill_tag_path(user_skill.skill_tag) %>
+  </div>
+</li>

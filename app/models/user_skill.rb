@@ -8,4 +8,6 @@ class UserSkill < ApplicationRecord
   belongs_to :skill_tag
   has_many :plusings
   has_many :addings
+
+  scope :points_desc, -> { order(points: :desc)  }
 end

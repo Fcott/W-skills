@@ -11,5 +11,7 @@ Rails.application.routes.draw do
                                :registrations => 'registrations'}
 
   resources :users, only: [:show]
+  resources :skill_tags, only: [:show, :create]
+  resources :user_skills, only: [:create, :delete]
 
 end
