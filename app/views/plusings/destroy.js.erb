@@ -1,2 +1,2 @@
 $(".skill_<%= @user_skill.id %>_btn").html('<%= escape_javascript(render("plusings/points_btn", user_skill: @user_skill)) %>')
-$(".skill_points_<%= @user_skill.id %>").text('<%= @user_skill.plusings.count %>')
+$(".skill_points_<%= @user_skill.id %>").text('<%= @user_skill.points %>')

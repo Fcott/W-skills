@@ -13,7 +13,6 @@ has_many :plusings
 has_many :addings
 
 
-
 def self.from_omniauth(auth)
    user = User.where(:email => auth.info.email).first
    if user
@@ -29,6 +28,7 @@ def self.from_omniauth(auth)
      end
    end
  end
+
 
  def plused?(user_skill)
    plusings.find_by(user_skill_id: user_skill.id)
