@@ -13,7 +13,7 @@
     </div>
     <ul class="skills">
     <% if @skills.any? %>
-      <%= render @skills %>
+      <%= render @skills, user: @user %>
     <% else %>
       <br>
       <p class="center">you haven't added any skills yet.</p>

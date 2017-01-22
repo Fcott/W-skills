@@ -1,6 +1,17 @@
 <li id="skill-<%= user_skill.id %>">
   <div class="user_skills">
-    <%= "#{user_skill.points}   " %>
-    <%= link_to "#{user_skill.skill_tag.name}", skill_tag_path(user_skill.skill_tag) %>
+    <span class="points_span">
+      <span class="skill_points_<%= user_skill.id %>">
+        <%= "#{user_skill.points}" %>
+      </span>
+      <% if  current_user.id != @user.id  && current_user.id != user_skill.addings.first.user_id  %>
+        <span class="skill_<%= user_skill.id %>_btn">
+          <%= render 'plusings/points_btn', user: @user, user_skill: user_skill %>
+        </span>
+      <% end %>
+    </span>
+    <span class="user_skill_name">
+      <%= link_to "#{user_skill.skill_tag.name}", skill_tag_path(user_skill.skill_tag) %>
+    </span>
   </div>
 </li>

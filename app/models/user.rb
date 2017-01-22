@@ -29,4 +29,16 @@ def self.from_omniauth(auth)
      end
    end
  end
+
+ def plused?(user_skill)
+   plusings.find_by(user_skill_id: user_skill.id)
+ end
+
+ def plus!(user_skill)
+   plusings.create!(user_skill_id: user_skill.id)
+ end
+
+ def unplused!(user_skill)
+   plusings.find_by(user_skill_id: user_skill.id).destroy
+ end
 end

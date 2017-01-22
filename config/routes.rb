@@ -9,8 +9,9 @@ Rails.application.routes.draw do
              :controllers => { :omniauth_callbacks => "omniauth_callbacks",
                                :registrations => 'registrations'}
 
-  resources :users, only: [:show]
+  resources :users, only: :show
   resources :skill_tags, only: [:show, :create]
-  resources :user_skills, only: [:create, :delete]
+  resources :user_skills, only: [:create, :destroy]
+  resources :plusings, only: [:create, :destroy]
 
 end

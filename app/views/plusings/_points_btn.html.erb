@@ -1,0 +1,9 @@
+<% if Plusing.find_by(user_id: current_user.id, user_skill_id: user_skill.id ) %>
+  <%= link_to plusing_path(current_user.plusings.find_by(user_skill_id: user_skill.id)), remote: true, method: :delete do %>
+    <i class="fa fa-minus" aria-hidden="true"></i>
+  <% end %>
+<% else %>
+  <%= link_to plusings_path(user_id: current_user.id, user_skill_id: user_skill.id), remote: true, method: :post do %>
+    <i class="fa fa-plus" aria-hidden="true"></i>
+  <% end %>
+<% end %>
