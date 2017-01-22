@@ -4,7 +4,7 @@
       <span class="skill_points_<%= user_skill.id %>">
         <%= "#{user_skill.points}" %>
       </span>
-      <% if  current_user.id != @user.id  && current_user.id != user_skill.addings.first.user_id  %>
+      <% if  current_user.id != @user.id  && current_user.id != user_skill.adding.user_id  %>
         <span class="skill_<%= user_skill.id %>_btn">
           <%= render 'plusings/points_btn', user: @user, user_skill: user_skill %>
         </span>

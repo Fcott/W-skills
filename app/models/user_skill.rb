@@ -7,9 +7,7 @@ class UserSkill < ApplicationRecord
   belongs_to :user
   belongs_to :skill_tag
   has_many :plusings
-  has_many :addings
-
-  # scope :points_desc, -> { order("self.plusings.count desc") }
+  has_one :adding
 
 
   def points
