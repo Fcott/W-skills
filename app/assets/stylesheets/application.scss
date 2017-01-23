@@ -94,9 +94,6 @@ ul {
   font-size: 24px;
   padding-left: 15px;
 }
-.user_skills {
-  padding: 10px 0;
-}
 
 // skill form
  .skill_form .form-control {
@@ -104,11 +101,20 @@ ul {
  }
 
 // user_skills
+.user_skills {
+  padding: 10px 0;
+}
 .points {
   font-size: 2em;
 }
 .points_span {
   width: 60px;
+  display: inline-block;
+}
+
+.user_skill_name{
+  width: 150px;
+  font-size: 1.5em;
   display: inline-block;
 }
 

@@ -11,4 +11,10 @@ class UserSkill < ApplicationRecord
 
   scope :points_desc, -> { order(points: :desc)  }
 
+  # def plused_users
+  #   self.plusings.map |p| do
+  #     p.user.username
+  #   end
+  # end
+
 end
