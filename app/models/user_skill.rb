@@ -11,12 +11,4 @@ class UserSkill < ApplicationRecord
 
   scope :points_desc, -> { order(points: :desc)  }
 
-  def points
-    plusings.count
-  end
-
-  # def top_skills
-  #   plusings.group(:user_skill_id).order("count_all desc").count
-  # end
-
 end

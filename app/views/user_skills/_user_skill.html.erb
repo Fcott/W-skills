@@ -1,12 +1,12 @@
 <li id="skill-<%= user_skill.id %>">
   <div class="user_skills">
     <span class="points_span">
-      <span class="skill_points_<%= user_skill.id %>">
-        <%= "#{user_skill.points}" %>
+      <span class="skill_points_<%= user_skill.id %> points">
+        <%= user_skill.points %>
       </span>
-      <% if  current_user.id != @user.id  && current_user.id != user_skill.adding.user_id  %>
+      <% unless  current_user == @user  %>
         <span class="skill_<%= user_skill.id %>_btn">
-          <%= render 'plusings/points_btn', user: @user, user_skill: user_skill %>
+          <%= render 'plusings/points_btn', user_skill: user_skill %>
         </span>
       <% end %>
     </span>

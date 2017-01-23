@@ -11,24 +11,17 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li>
-            <i class="" ></i>Write a story
-        </li>
-        <li>
-            <i class="fa fa-envelope-o fa-lg navlogo"></i>Messages
-        </li>
 
         <% if(!user_signed_in?) %>
           <li><%= link_to "Log In", new_user_session_path %></li>
           <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <% else %>
+        <li><%= link_to "Your Page", user_path(current_user) %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <%= image_tag user_picture(current_user), class: "img-circle pic-small" %>&nbsp;
             <%= current_user.username %> <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><%= link_to "Your Page", user_path(current_user) %></li>
-            <li role="separator" class="divider"></li>
             <li><%= link_to "Settings", edit_user_registration_path %></li>
             <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
           </ul>
