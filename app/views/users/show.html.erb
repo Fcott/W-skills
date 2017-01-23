@@ -12,8 +12,8 @@
       <%= render "skill_tags/form", user: @user　%>
     </div>
     <ul class="skills">
-    <% if @skills.any? %>
-      <%= render @skills, user: @user %>
+    <% if @user_skills.any? %>
+      <%= render @user_skills, user: @user %>
     <% else %>
       <br>
       <p class="center">you haven't added any skills yet.</p>
