@@ -13,10 +13,10 @@
     <span class="user_skill_name">
       <%= link_to "#{user_skill.skill_tag.name}", skill_tag_path(user_skill.skill_tag) %>
     </span>
-    <% if @skills.first(@feature_skills_num).include?(user_skill) %>
-      <span>
-        <% user_skill.plusings.first(@plused_users_num).each do |p| %>
-          <%= image_tag "#{user_picture(p.user)}", class: "img-circle pic-small" %>
+    <% if @feature_skills.include?(user_skill) %>
+      <span class="skill_<%= user_skill.id %>_plused_users">
+        <% user_skill.first_10_plusing.each do |p| %>
+          <%= image_tag "#{user_picture(p.user)}", class: "img-circle pic-small img_#{p.user.id}" %>
         <% end %>
       </span>
     <% end %>
