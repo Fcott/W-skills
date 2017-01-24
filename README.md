@@ -1,24 +1,11 @@
-# README
+# 「スキル、特徴」
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Badge Status](https://ci-as-a-service)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+必須の仕様に加え、
+- スキルのポイント増減時のAjax
+- +1の回数が多い上位6件は、それぞれ最大10人まで+1した人が表示されている。
+- 他の人につけた+1をキャンセルすることができる。
+- 同じスキルが付いている人の一覧を見ることができる
+- スキルの追加時にautocompleteでスキル名が補完されるUI。
+- ホームページに注目のスキル、ユーザーを載せました。
