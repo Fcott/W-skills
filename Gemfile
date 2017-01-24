@@ -26,6 +26,7 @@ gem'omniauth'
 gem'omniauth-facebook'
 gem "figaro"
 gem 'font-awesome-sass'
+gem 'pry'
 
 
 group :development, :test do

@@ -10,7 +10,9 @@ class SkillTagsController < ApplicationController
     if @skill_tag
       @user_skill = UserSkill.find_or_create_by(user_id: params[:skill_tag][:user_id], skill_tag_id: @skill_tag.id)
       Adding.find_or_create_by(user_id: params[:skill_tag][:added_user_id], user_skill_id: @user_skill.id)
-      redirect_back(fallback_location: root_path)
+      respond_to do |format|
+        format.html { redirect_back(fallback_location: root_path) }
+      end
     end
   end
 
