@@ -1,5 +1,69 @@
 <br>
 <br>
 <br>
-
 <h1 class="center">Share your skills!</h1>
+<br>
+<br>
+<div class="row">
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="center">Most recently added skill!</h4>
+      </div>
+        <div class="panel-body">
+          <div class="med_font center">
+            <% if @most_recently_added_skill %>
+              <%= link_to skill_tag_path(@most_recently_added_skill.skill_tag) do %>
+                <%= @most_recently_added_skill.skill_tag.name %>
+              <% end %>
+              <%= link_to user_path(@most_recently_added_skill.user) do %>
+                <%= image_tag user_picture(@most_recently_added_skill.user), class: "img-circle pic-small" %>
+                <%= @most_recently_added_skill.user.username  %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="center">User having most number of skills!</h4>
+        </div>
+          <div class="panel-body">
+            <div class="med_font center">
+              <% if @highest_points_skill %>
+                <%= "#{@number_of_skills} skills!" %>
+                <%= link_to user_path(@user_most_number_of_skills) do %>
+                  <%= image_tag user_picture(@user_most_number_of_skills), class: "img-circle pic-small" %>
+                  <%= @user_most_number_of_skills.username %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="center">Highest points of skill!</h4>
+          </div>
+            <div class="panel-body">
+              <div class="med_font center">
+                <% if @user_most_number_of_skills %>
+                  <%= "#{@highest_points_skill.points}" %>
+                  <%= link_to skill_tag_path(@highest_points_skill.skill_tag) do %>
+                    <%= @highest_points_skill.skill_tag.name %>
+                  <% end %>
+                  <%= link_to user_path(@highest_points_skill.user) do %>
+                    <%= image_tag user_picture(@highest_points_skill.user), class: "img-circle pic-small" %>
+                    <%= @highest_points_skill.user.username  %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>

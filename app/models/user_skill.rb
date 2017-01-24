@@ -9,7 +9,8 @@ class UserSkill < ApplicationRecord
   has_many :plusings
   has_one :adding
 
-  scope :points_desc, -> { order(points: :desc)  }
+  scope :points_desc, -> { order(points: :desc) }
+  scope :created_desc, -> { order(created_at: :desc) }
 
 
   def first_10_plusing
