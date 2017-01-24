@@ -1,4 +1,5 @@
 class SkillTagsController < ApplicationController
+  before_action :authenticate_user!
 
   def show
     @skill_tag = SkillTag.find(params[:id])
