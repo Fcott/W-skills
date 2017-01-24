@@ -10,4 +10,8 @@ class SkillTag < ApplicationRecord
     self.name.strip
   end
 
+  def skill_of(user)
+    user_skills.find_by(user_id: user.id)
+  end
+
 end

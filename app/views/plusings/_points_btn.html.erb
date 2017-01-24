@@ -1,5 +1,5 @@
 <% if current_user.plused?(user_skill) %>
-  <%= link_to plusing_path(current_user.plusings.find_by(user_skill_id: user_skill.id)), remote: true, method: :delete do %>
+  <%= link_to plusing_path(current_user.plused?(user_skill)), remote: true, method: :delete do %>
     <i class="fa fa-minus" aria-hidden="true"></i>
   <% end %>
 <% else %>

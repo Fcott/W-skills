@@ -6,6 +6,6 @@
     <% end %>
   </span>
   <span class="points">
-    <%= "#{@skill_tag.user_skills.find_by(user_id: user.id).points}" %>
+    <%= "#{@skill_tag.skill_of(user).points}" %>
   </span>
 </div>
