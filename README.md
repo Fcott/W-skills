@@ -1,6 +1,5 @@
 # 「スキル、特徴」
-
-![Badge Status](https://ci-as-a-service)
+<https://skills51525.herokuapp.com/>
 
 必須の仕様に加え、
 - スキルのポイント増減時のAjax
